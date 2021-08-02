@@ -30,6 +30,10 @@ class Solution
                 max = arr[i];
             }
         }
+        if(arr[pos] == max){
+            findMax(arr,k,pos+1);
+            return;
+        }
         for(int i=pos+1;i<len;i++){
             if(arr[i] == max){
                 arr[i] = arr[pos];
@@ -39,6 +43,5 @@ class Solution
                 arr[i] = max;
             }
         }
-        if(arr[pos] == max)findMax(arr,k,pos+1);
     }
 }
